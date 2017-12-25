@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+	font-family: 'Lato', sans-serif;
+}
+
+.newLine::after {
+	white-space: pre;
+	content: '\A';
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #1262CF;
+	position: relative;
+	background: url('../img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+
+}
+
+.container::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.title {
+	text-align: center;
+	z-index: 10;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 5rem;
+	color: #fff;
+}
+
+.clock {
+	z-index: 10;
+	width: 30rem;
+	height: 30rem;
+	border:10px solid white;
+	border-radius:50%;
+	margin:50px auto;
+	position: relative;
+	padding:2rem;
+    }
+
+    .clock-face {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+	z-index: 10;
+	width:50%;
+	height:6px;
+	background:black;
+	position: absolute;
+	top:50%;
+	transform-origin: 100%;
+	transform: rotate(90deg);
+	transition: all 0.05s;
+	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+
+    .second-hand {
+    	background: #B70E0E;
+    }
+
+    .digital {
+    	z-index: 1;
+    	position: absolute;
+    	width: 70%;
+    	height: 50px;
+    	background: #eee;
+    	left: 50%;
+    	top: 60%;
+    	transform: translateX(-50%);
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	font-size: 4rem;
+    }
+
